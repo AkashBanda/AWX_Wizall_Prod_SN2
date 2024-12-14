@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: Wizall-SN2 Prod Deployment Service Setting up
+      template:
+         src: "/root/Ansible/Wizall_Prod/SN2/Wizall_SN2_Var.j2"
+         dest: "/root/Ansible/Wizall_Prod/SN2/var.yml"
