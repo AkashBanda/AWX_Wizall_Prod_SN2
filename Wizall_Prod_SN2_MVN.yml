@@ -4,7 +4,7 @@
   tasks:
      - command:
           cmd: "git pull"
-          chdir: "/root/Ansible/Wizall_Prod/MFS-WizallMW/"
+          chdir: "/root/Ansible/Wizall_Prod/SN2/MFS-WizallMW/"
        register: output
 
      - debug:
@@ -13,24 +13,24 @@
      - name: "MVN running on MobifinMainModule"
        command:
           cmd: "mvn clean install"
-          chdir: "/root/Ansible/Wizall_Prod/MFS-WizallMW/MobifinMainModule"
+          chdir: "/root/Ansible/Wizall_Prod/SN2/MFS-WizallMW/MobifinMainModule"
 
      - name: "MVN running on RedisDataProvider"
        command:
           cmd: "mvn clean install"
-          chdir: "/root/Ansible/Wizall_Prod/MFS-WizallMW/RedisDataProvider"
+          chdir: "/root/Ansible/Wizall_Prod/SN2/MFS-WizallMW/RedisDataProvider"
 
      - name: "MVN running on DatabaseServiceProvider"
        command:
           cmd: "mvn clean install"
-          chdir: "/root/Ansible/Wizall_Prod/MFS-WizallMW/DatabaseServiceProvider"
+          chdir: "/root/Ansible/Wizall_Prod/SN2/MFS-WizallMW/DatabaseServiceProvider"
 
      - name: "MVN running on TransactionModule"
        command:
           cmd: "mvn clean install"
-          chdir: "/root/Ansible/Wizall_Prod/MFS-WizallMW/TransactionModule"
+          chdir: "/root/Ansible/Wizall_Prod/SN2/MFS-WizallMW/TransactionModule"
 
      - name: "MVN running on {{ service }}"
        command:
           cmd: "mvn clean install"
-          chdir: "/root/Ansible/Wizall_Prod/MFS-WizallMW/{{ service }}"
+          chdir: "/root/Ansible/Wizall_Prod/SN2/MFS-WizallMW/{{ service }}"
